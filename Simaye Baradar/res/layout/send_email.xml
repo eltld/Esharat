@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/header_title" />
+    
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            tools:ignore="ScrollViewSize" >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="7dp"
+                tools:ignore="UselessParent" >
+                <TextView
+                    android:id="@+id/Lbl_Description_Email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:paddingBottom="25dp"
+                    android:text="@string/Str_Desc_Email"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/Lbl_Name_Email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingBottom="5dp"
+                    android:text="@string/Str_Name_Family_Email" />
+                <EditText
+                    android:id="@+id/Txt_Name_Email"
+                    style="@style/Edit_Text_Style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/style_text"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:inputType="textPersonName"
+                    android:padding="5dp" />
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="15dp" >
+                    <TextView
+                        android:id="@+id/Lbl_Email_Email"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingBottom="5dp"
+                        android:text="@string/Str_Email_Email" />
+                    <EditText
+                        android:id="@+id/Txt_Email_Email"
+                        style="@style/Edit_Text_Style"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/style_text"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        android:padding="5dp" >
+
+                    </EditText>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="15dp" >
+                        <TextView
+                            android:id="@+id/Lbl_Message_Email"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:paddingBottom="5dp"
+                            android:text="@string/Str_Message_Email" />
+                        <EditText
+                            android:id="@+id/Txt_Message_Email"
+                            style="@style/Edit_Text_Style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/style_text"
+                            android:ems="@android:integer/config_mediumAnimTime"
+                            android:gravity="right"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:padding="5dp" />
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|right"
+                            android:orientation="vertical"
+                            android:paddingBottom="1dp"
+                            android:paddingTop="15dp" >
+                            <Button
+                                android:id="@+id/Btn_Send_Email"
+                                android:layout_width="154dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/gradient_button"
+                                android:text="@string/Str_Send_Email" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+           </LinearLayout>
+    </ScrollView>
+</LinearLayout>

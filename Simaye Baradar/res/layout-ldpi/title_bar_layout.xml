@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fbf8f8"
+    android:gravity="center|top"
+    android:paddingTop="3dp" >
+    
+    <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:gravity="right|top" >
+            <ImageView
+                android:id="@+id/Img_Icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/Image_Desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|top"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp" >
+            <ImageView
+	            android:id="@+id/Img_Download"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+	            android:background="@drawable/title_download_button_ldpi"
+	            android:contentDescription="@string/Image_Desc"
+	            android:visibility="invisible" />
+            <ImageView
+	            android:id="@+id/Img_Bookmark"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:layout_alignParentTop="true"
+	            android:layout_toRightOf="@+id/Img_Download"
+	            android:background="@drawable/title_bookmark_button_ldpi"
+	            android:contentDescription="@string/Image_Desc"
+	            android:visibility="invisible" />
+            <ImageView
+	            android:id="@+id/Img_Share"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:layout_alignParentTop="true"
+	            android:layout_toRightOf="@+id/Img_Bookmark"
+	            android:background="@drawable/title_share_button_ldpi"
+	            android:contentDescription="@string/Image_Desc"
+	            android:visibility="invisible" />
+            <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_toRightOf="@+id/Img_Share"
+	            android:gravity="right"
+	            android:orientation="vertical" >
+	            <TextView
+	                android:id="@+id/Lbl_Title_Page"
+	                style="@style/Title_Text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginRight="40dp"
+	                android:bufferType="normal"
+	                android:ellipsize="end"
+	                android:freezesText="true"
+	                android:gravity="right|top"
+	                android:paddingLeft="3dp"
+	                android:paddingRight="5dp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+	        android:id="@+id/Img_title_Botton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/relativeLayout2"
+	        android:scaleType="fitXY"
+	        android:src="@drawable/title_botton_image"
+	        android:contentDescription="@string/Image_Desc"/>
+</RelativeLayout>

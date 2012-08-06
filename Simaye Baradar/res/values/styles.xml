@@ -1,5 +1,23 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AppTheme" parent="android:Theme.Light" />
-
+    <style name="AppTheme" parent="android:Theme.Light.NoTitleBar">
+        <!-- <item name="android:scrollbarThumbVertical">@drawable/thumb_scroll</item>
+        <item name="android:scrollbarTrackVertical">@drawable/track_scroll</item> -->
+    </style>
+    
+    <style name="Edit_Text_Style">
+        <item name="android:textColor">#363636</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+    
+    <style name="Title_Text">
+        <item name="android:textColor">#363636</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+    
+    
 </resources>

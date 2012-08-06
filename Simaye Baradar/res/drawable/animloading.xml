@@ -1,0 +1,14 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+<item android:drawable="@drawable/semc_wait_feedback_big_1" android:duration="100" />
+<item android:drawable="@drawable/semc_wait_feedback_big_2" android:duration="100" />
+<item android:drawable="@drawable/semc_wait_feedback_big_3" android:duration="100" />
+
+<item android:drawable="@drawable/semc_wait_feedback_big_4" android:duration="100" />
+<item android:drawable="@drawable/semc_wait_feedback_big_5" android:duration="100" />
+<item android:drawable="@drawable/semc_wait_feedback_big_6" android:duration="100" />
+
+<item android:drawable="@drawable/semc_wait_feedback_big_7" android:duration="100" />
+<item android:drawable="@drawable/semc_wait_feedback_big_8" android:duration="100" />
+
+</animation-list>

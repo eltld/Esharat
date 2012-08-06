@@ -2,7 +2,21 @@
 
     <string name="app_name">Simaye Baradar</string>
     <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
-
+    <string name="Image_Desc">Image Desc</string>
+    
+    <string name="Str_Name_Family_Email">نام و نام خانوادگی</string>
+    <string name="Str_Email_Email">پست الکترونيکی</string>
+    <string name="Str_Message_Email">متن پيام</string>
+    <string name="Str_Send_Email">ارسال</string>
+    <string name="Str_Cancel_Email">انصراف</string>
+    <string name="Str_Desc_Email">
+        شما می توانيد پيشنهادات و انتقادات خود را در مورد برنامه از طريق فرم زير اعلام کنيد
+    </string>
+    
+    <string name="Str_Context_Title">تنظيمات</string>
+    <string name="Str_About_Back">بازگشت</string>
+    <string name="Str_Desc_Video">توضيحات ويديو</string>
+    <string name="Str_Download_Title">در حال دانلود ويديو</string>
+    <string name="Str_Name_Download">"نام فايل : "</string>
+    <string name="Str_Download_Sixe">"حجم : "</string>
 </resources>
