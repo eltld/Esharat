@@ -20,6 +20,7 @@
         </activity>
     <activity android:name=".Main_Activity"></activity>
     <activity android:name=".Send_Email"></activity>
+    <activity android:name="AboutActivity"></activity>
 </application>
 
 </manifest>
