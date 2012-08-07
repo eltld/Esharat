@@ -245,8 +245,12 @@ public class Send_Email extends Activity {
 		protected Void doInBackground(String... params) {
 			
 			try {   
-                GMailSender sender = new GMailSender("mohammadrbestdl@gmail.com", "937935mrmh991");
-                sender.sendMail("Email From Android App", params[0].toString(), "programmer.net2009@live.com", "programmer.net2009@live.com"); 
+                GMailSender sender = new GMailSender("esharatculturalgroup@gmail.com", "abcd/1234");
+                sender.sendMail(
+                		"Simaye Baradar - Feed back",           //Subject
+                		params[0].toString(),                   //Body
+                		"esharatculturalgroup@gmail.com",       //Sender
+                		"programmer.net2009@live.com");         //Recipients
             } catch (Exception e) {   
                getCustomToast("متاسفنه پيام ارسال نشد، اطفا مججدا تلاش نماييد");   
             }

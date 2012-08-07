@@ -1,8 +1,11 @@
 package com.Esharat.Widget;
 
+import com.Esharat.Classes.PersianReshape;
 import com.Esharat.Simaye.Baradar.*;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.preference.PreferenceManager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +15,13 @@ import android.widget.TextView;
 
 public class Title_Pages extends RelativeLayout {
 	
-
+	
+	private String font_iraniansans = "irsans.ttf";
+	private Typeface tf_IRsans;
+	private SharedPreferences Pref;
+	private String Str_Mode;
 	
 	private RelativeLayout Title_View;
-	
 	private TitleBarClickListener mTitlebarClickListener;
 	private TitleBarLongClickListener mTitleLong;
 	private Context mContext;
@@ -29,18 +35,24 @@ public class Title_Pages extends RelativeLayout {
 	public Title_Pages(Context context) {
 		super(context);
 		this.mContext = context;
+		tf_IRsans = Typeface.createFromAsset(context.getAssets(), "font/" + font_iraniansans + "");
+		Pref = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
 		Init();
 	}
 	
 	public Title_Pages(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		this.mContext = context;
+		tf_IRsans = Typeface.createFromAsset(context.getAssets(), "font/" + font_iraniansans + "");
+		Pref = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
 		Init();
 	}
 	
 	public Title_Pages(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		this.mContext = context;
+		tf_IRsans = Typeface.createFromAsset(context.getAssets(), "font/" + font_iraniansans + "");
+		Pref = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
 		Init();
 	}
 	
@@ -63,7 +75,9 @@ public class Title_Pages extends RelativeLayout {
 	}
 	
 	public void Init(){
-
+	
+		Str_Mode = Pref.getString("Font Mode", "");
+		
 		mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		Title_View = (RelativeLayout) mInflater.inflate(R.layout.title_bar_layout, null);
 		addView(Title_View);
@@ -74,6 +88,12 @@ public class Title_Pages extends RelativeLayout {
 		mShare      =   (ImageView) Title_View.findViewById(R.id.Img_Share);
 		mTitle      =   (TextView) Title_View.findViewById(R.id.Lbl_Title_Page);
 		
+		mTitle.setTypeface(tf_IRsans);
+		
+		if(Str_Mode.equals("Mode 1"))
+	    	 mTitle.setText(mTitle.getText());
+	     else if (Str_Mode.equals("Mode 2"))
+	    	 mTitle.setText(PersianReshape.reshape(mTitle.getText().toString()));
 		
 		mAppIcon.setOnClickListener(new OnClickListener() {public void onClick(View v) {mTitlebarClickListener.ClickEvent(v.getId());}});
 		

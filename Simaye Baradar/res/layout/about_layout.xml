@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LinearLayout1"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center|top"
-    android:orientation="vertical"
-    android:paddingTop="15dp" >
+    android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/button1"
+    <include
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        layout="@layout/header_title" />
+
+    <TextView
+        android:id="@+id/Txt_About_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="30dp"
+        android:text="@string/Str_About_Description"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-</LinearLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:padding="7dp" >
+
+        <Button
+            android:id="@+id/Btn_About_Back"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Str_About_Back" />
+    </RelativeLayout>
+
+</RelativeLayout>
