@@ -47,7 +47,7 @@ public class Title_Pages extends RelativeLayout {
 	//--------------------------------------------INIT-------------------------------
 	
 	public interface TitleBarClickListener{
-		public void EventClicked(int id);
+		public void ClickEvent(int id);
 	}
 	
 	public void setOnItemCliclListener(TitleBarClickListener mTitleClicked) {
@@ -55,7 +55,7 @@ public class Title_Pages extends RelativeLayout {
 	}
 	
 	public interface TitleBarLongClickListener{
-		public void EventClicked(int id);
+		public void LongClickEvent(int id);
 	}
 	
 	public void setOnItemLongCliclListener(TitleBarLongClickListener mTitleClicked) {
@@ -75,15 +75,15 @@ public class Title_Pages extends RelativeLayout {
 		mTitle      =   (TextView) Title_View.findViewById(R.id.Lbl_Title_Page);
 		
 		
-		mAppIcon.setOnClickListener(new OnClickListener() {public void onClick(View v) {mTitlebarClickListener.EventClicked(v.getId());}});
+		mAppIcon.setOnClickListener(new OnClickListener() {public void onClick(View v) {mTitlebarClickListener.ClickEvent(v.getId());}});
 		
-		mAppIcon.setOnLongClickListener(new OnLongClickListener() {public boolean onLongClick(View v) {mTitleLong.EventClicked(v.getId()); return false;}});
+		mAppIcon.setOnLongClickListener(new OnLongClickListener() {public boolean onLongClick(View v) {mTitleLong.LongClickEvent(v.getId()); return false;}});
 		
-		mDownload.setOnClickListener(new OnClickListener() {public void onClick(View v) {mTitlebarClickListener.EventClicked(v.getId());}});
+		mDownload.setOnClickListener(new OnClickListener() {public void onClick(View v) {mTitlebarClickListener.ClickEvent(v.getId());}});
 		
-		mMark.setOnClickListener(new OnClickListener() {public void onClick(View v) {mTitlebarClickListener.EventClicked(v.getId());}});
+		mMark.setOnClickListener(new OnClickListener() {public void onClick(View v) {mTitlebarClickListener.ClickEvent(v.getId());}});
 		
-		mShare.setOnClickListener(new OnClickListener() {public void onClick(View v) {mTitlebarClickListener.EventClicked(v.getId());}});
+		mShare.setOnClickListener(new OnClickListener() {public void onClick(View v) {mTitlebarClickListener.ClickEvent(v.getId());}});
 		
 	}
 	

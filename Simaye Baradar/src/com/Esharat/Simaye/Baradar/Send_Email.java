@@ -119,7 +119,7 @@ public class Send_Email extends Activity {
 		Title_Main.Set_App_Icon(R.drawable.ic_launcher);
 		Title_Main.setOnItemCliclListener(new TitleBarClickListener() {
 			
-			public void EventClicked(int id) {
+			public void ClickEvent(int id) {
 				switch(id){
 					case R.id.Img_Icon: finish(); break;
 					case R.id.Img_Bookmark: break;
